@@ -1,0 +1,255 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #F5F0E6;
+    color: #3E2723;
+}
+
+/* Container Styling */
+#content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styling */
+.header {
+    background-color: #5D4037;
+    color: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav-item {
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-item:hover {
+    color: #A1887F;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #A1887F;
+    transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+/* Home Page Styling */
+.home-container {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.home-container h1 {
+    color: #5D4037;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.home-container p {
+    color: #795548;
+    margin-bottom: 2rem;
+}
+
+.about-section {
+    background-color: #E6D5C1;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+.about-section h2 {
+    color: #5D4037;
+    margin-bottom: 1rem;
+}
+
+/* Menu Page Styling */
+.menu-container {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.menu-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.menu-image {
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.menu-list {
+    list-style-type: none;
+    width: 100%;
+}
+
+.menu-item {
+    background-color: #E6D5C1;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item h2 {
+    margin-bottom: 0.5rem;
+    color: #5D4037;
+}
+
+.menu-item span {
+    font-weight: bold;
+    color: #3E2723;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item p {
+    color: #795548;
+}
+
+.menu-item:hover {
+    background-color: #D7C4B7;
+}
+
+/* Contact Page Styling */
+.contact-container {
+    display: flex;
+    gap: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.contact-info-container {
+    flex: 1;
+    background-color: #E6D5C1;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.contact-info-container h1 {
+    color: #5D4037;
+    margin-bottom: 1rem;
+}
+
+.form-container {
+    flex: 2;
+}
+
+.form-container h1 {
+    color: #5D4037;
+    margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 0.5rem;
+    color: #795548;
+}
+
+form input, 
+form textarea {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #A1887F;
+    border-radius: 5px;
+    width: 100%;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+form button {
+    background-color: #5D4037;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #3E2723;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .menu-content {
+        flex-direction: column;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+}
